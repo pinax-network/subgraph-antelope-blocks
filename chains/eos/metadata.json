@@ -1,7 +1,7 @@
 {
     "name": "EOS Blocks",
     "displayName": "EOS Blocks",
-    "description": "Full Blocks",
+    "description": "WAX full history blocks",
     "image": "ipfs://QmVj1qaLJKysWm2Yz9hh6Z2V1Pv9DuAoJ4rMhCWRtbMwD1",
     "subgraphImage": "https://api.thegraph.com/ipfs/api/v0/cat?arg=QmVj1qaLJKysWm2Yz9hh6Z2V1Pv9DuAoJ4rMhCWRtbMwD1",
     "codeRepository": "https://github.com/pinax-network/subgraph-antelope-blocks",
