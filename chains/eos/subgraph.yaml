@@ -1,19 +1,16 @@
 specVersion: 1.2.0
-description: EOS Transactions, Decoded Actions & Database Operations
-repository: https://github.com/pinax-network/antelope-transactions-subgraph
+description: EOS Blocks
+repository: https://github.com/pinax-network/subgraph-antelope-blocks
 schema:
   file: ../../schema.graphql
-indexerHints:
-  prune: 2419200 # 14 days (2 blocks per second)
 dataSources:
   - kind: substreams
-    name: eos_transactions
+    name: eos_blocks
     network: eos
     source:
-      startBlock: 390796092
       package:
         moduleName: graph_out
-        file: ./eos-transactions-v0.3.9.spkg
+        file: ../../antelope-blocks-v0.1.0.spkg
     mapping:
       kind: substreams/graph-entities
       apiVersion: 0.0.5

@@ -4,16 +4,15 @@ all:
 
 .PHONY: build
 build:
-	cargo build --target wasm32-unknown-unknown --release
-	substreams pack
 	graph build
-	substreams info
 
 .PHONY: deploy
 deploy:
-	graph create --node http://localhost:8020 wax_transactions
-	graph deploy --node=http://localhost:8020 wax_transactions
+	graph build
+	graph create --node http://localhost:8020 wax_blocks
+	graph deploy --node=http://localhost:8020 wax_blocks
 
 .PHONY: publish
 publish:
-	graph publish --subgraph-id 4bAe7NA8b6J14ZfZr3TXfzzjjSoGECTFuqv7CwnK1zzg
+	graph build
+	graph publish --subgraph-id ???

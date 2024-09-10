@@ -4,16 +4,15 @@ all:
 
 .PHONY: build
 build:
-	cargo build --target wasm32-unknown-unknown --release
-	substreams pack
 	graph build
-	substreams info
 
 .PHONY: deploy
 deploy:
-	graph create --node http://localhost:8020 eos_transactions
-	graph deploy --node=http://localhost:8020 eos_transactions
+	graph build
+	graph create --node http://localhost:8020 eos_blocks
+	graph deploy --node=http://localhost:8020 eos_blocks
 
 .PHONY: publish
 publish:
-	graph publish --subgraph-id 2RNdhL5p62dGN5UqKtsSEhYZiTJbFcuuhzk9qRJj8QeU
+	graph build
+	graph publish --subgraph-id ???

@@ -1,9 +1,3 @@
 mod sinks;
 mod utils;
-mod keys;
-mod index;
-mod db_ops;
-mod actions;
-mod authorizations;
-mod transactions;
 mod blocks;
