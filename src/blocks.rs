@@ -65,13 +65,13 @@ pub fn insert_blocks(tables: &mut Tables, clock: &Clock, block: &Block) {
 
         // block
         .set_bigint("version", &version.to_string())
-        .set("producerSignature", producer_signature.to_string())
-        .set("dposProposedIrreversibleBlocknum", dpos_proposed_irreversible_blocknum.to_string())
-        .set("dposIrreversibleBlocknum", dpos_irreversible_blocknum.to_string())
+        .set("producerSignature", producer_signature)
+        .set_bigint("dposProposedIrreversibleBlocknum", &dpos_proposed_irreversible_blocknum.to_string())
+        .set_bigint("dposIrreversibleBlocknum", &dpos_irreversible_blocknum.to_string())
 
         // block roots
-        .set("transactionMroot", transaction_mroot.to_string())
-        .set("actionMroot", action_mroot.to_string())
+        .set("transactionMroot", transaction_mroot)
+        .set("actionMroot", action_mroot)
         .set("blockrootMerkleActiveNodes", blockroot_merkle_active_nodes)
         .set_bigint("blockrootMerkleNodeCount", &blockroot_merkle_node_count.to_string())
         ;
