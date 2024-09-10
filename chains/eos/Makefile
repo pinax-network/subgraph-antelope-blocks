@@ -15,4 +15,4 @@ deploy:
 .PHONY: publish
 publish:
 	graph build
-	graph publish --subgraph-id ???
+	graph publish --subgraph-id 4HGGrx3dn8nNc96sBu7QHgsfsncLQ63xpt2hX1ANrsGs
